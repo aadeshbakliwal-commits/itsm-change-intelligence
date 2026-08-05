@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Week of Jul 28 – Aug 5, 2026 | IT Change Intelligence</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="sidebar-logo">IT Change Intelligence</div>
+      <div class="sidebar-tagline">Weekly ITSM change management &amp; AI research</div>
+
+      <nav>
+        <h3>Weekly Reports</h3>
+        <ul>
+          <li><a href="2026-08-05.html" class="active">Aug 5, 2026 — Inaugural</a></li>
+        </ul>
+      </nav>
+
+      <div class="toc">
+        <h3>On This Page</h3>
+        <a href="#summary">Executive Summary</a>
+        <a href="#news">This Week's News</a>
+        <a href="#servicenow">ServiceNow</a>
+        <a href="#jsm">Jira Service Management</a>
+        <a href="#freshservice">Freshservice</a>
+        <a href="#bmc">BMC Helix</a>
+        <a href="#others">Other Players</a>
+        <a href="#startups">AI Layer &amp; Startups</a>
+        <a href="#trends">Industry Trends</a>
+        <a href="#resources">Articles &amp; Videos</a>
+        <a href="#takeaways">Key Takeaways</a>
+      </div>
+    </aside>
+
+    <main>
+      <div class="hero">
+        <h1>Week of Jul 28 – Aug 5, 2026</h1>
+        <div class="hero-meta">
+          <span>Published Aug 5, 2026</span>
+          <span class="badge">Inaugural Edition</span>
+        </div>
+      </div>
+
+      <!-- EXECUTIVE SUMMARY -->
+      <section id="summary">
+        <h2>Executive Summary</h2>
+        <p>
+          IT change management is undergoing its most significant shift since ITIL formalized the practice.
+          The dominant theme this week is <strong>agentic AI moving from assistive to autonomous</strong> —
+          platforms are deploying multi-agent workflows that validate change requests, score risk, generate
+          implementation/backout plans, and flag scheduling conflicts before CAB review.
+        </p>
+        <p>
+          Three major product moments stand out: <strong>BMC Helix ITSM 26.3</strong> (released Jul 21) added
+          autonomous change validation and risk assessment agents; <strong>Freshservice's May 2026 launch</strong>
+          introduced deterministic Change Risk Policies with MCP Gateway for AI tool integration; and
+          <strong>Atlassian's AI Risk Assessment</strong> reached general availability for JSM Premium/Enterprise.
+          ServiceNow continues to lead with its Change Quality Agent and agentic workflow collection, while
+          pricing restructured in April 2026 bundles Now Assist and Moveworks into every tier.
+        </p>
+        <p>
+          Across the industry, experts emphasize <strong>governance-first adoption</strong> — AI agents need
+          human-in-the-loop supervision, clean CMDB data, and auditable execution paths. Change management
+          failures still cause ~42% of cloud outages, making this one of the highest-ROI areas for AI investment.
+        </p>
+      </section>
+
+      <!-- THIS WEEK'S NEWS -->
+      <section id="news">
+        <h2>This Week's News</h2>
+
+        <div class="news-item">
+          <div class="date">Jul 21, 2026</div>
+          <h4>BMC Helix ITSM Change Management 26.3 Released</h4>
+          <p>
+            BMC shipped version 26.3 with autonomous change request validation and risk assessment via the
+            Change Coordinator agent. The agent analyzes documentation completeness, assesses risk using
+            historical outcomes, and generates structured reports in the activity timeline — advisory only,
+            not enforcing decisions.
+          </p>
+          <a href="https://docs.helixops.ai/bin/Service-Management/IT-Service-Management/BMC-Helix-ITSM-Change-Management/change263/" target="_blank" rel="noopener">BMC Helix Change Management 26.3 docs →</a>
+        </div>
+
+        <div class="news-item">
+          <div class="date">Jul 23, 2026</div>
+          <h4>BMC Helix 26.3 Enhancement Details Published</h4>
+          <p>
+            Documentation updated confirming automatic validation and risk assessment on status transitions,
+            reducing manual CAB prep effort and improving consistency across change lifecycles.
+          </p>
+          <a href="https://docs.helixops.ai/bin/Service-Management/IT-Service-Management/BMC-Helix-ITSM-Change-Management/change263/Managing-change/Using-Change-Coordinator-Agent-for-change-risk-assessment-and-validation/" target="_blank" rel="noopener">Change Coordinator agent docs →</a>
+        </div>
+
+        <div class="news-item">
+          <div class="date">Early Aug 2026</div>
+          <h4>Computerworld: AI Agents in IT Ops Need Humans in the Loop</h4>
+          <p>
+            Fixify study of tens of thousands of human-AI interactions found AI performs ~1 in 3 actions in
+            enterprise IT workflows, with humans rejecting ~25% of AI-proposed actions (down from higher rates).
+            Identity-lifecycle changes fail 3–9× more often than hardware changes. "Target not found" is the
+            top failure category (~50%) — a data hygiene problem, not an AI problem.
+          </p>
+          <a href="https://www.computerworld.com/article/4205062/ai-agents-get-better-at-it-ops-but-only-with-humans-in-the-loop.html" target="_blank" rel="noopener">Computerworld article →</a>
+        </div>
+
+        <div class="news-item">
+          <div class="date">Recent</div>
+          <h4>Iberdrola Deploys Agentic Change Validation on AWS Bedrock</h4>
+          <p>
+            One of the world's largest utilities built a multi-agent workflow on Amazon Bedrock AgentCore
+            integrated with ServiceNow. Four specialized agents (Rule Extractor, Content Validator, AIM Model
+            Analyst, Phase Transition) validate change requests in the draft phase — checking model
+            appropriateness and mandatory field formatting before progression.
+          </p>
+          <a href="https://aws.amazon.com/blogs/machine-learning/iberdrola-enhances-it-operations-using-amazon-bedrock-agentcore/" target="_blank" rel="noopener">AWS blog: Iberdrola case study →</a>
+        </div>
+
+        <div class="news-item">
+          <div class="date">Recent</div>
+          <h4>Global MSP Validates Agentic BGP Change Management with Itential</h4>
+          <p>
+            A regulated MSP deployed four FlowAgents with multi-agent orchestration for BGP network changes.
+            The system demonstrated AI blocking a flawed change even after human approval — proving agentic
+            ops can work inside regulated change processes without losing audit trails.
+          </p>
+          <a href="https://www.itential.com/customer-stories/global-msp-agentic-change-management/" target="_blank" rel="noopener">Itential customer story →</a>
+        </div>
+      </section>
+
+      <!-- SERVICENOW -->
+      <section id="servicenow">
+        <h2>ServiceNow</h2>
+
+        <div class="competitor-block">
+          <h3>ServiceNow Change Management <span class="competitor-tag">Market Leader</span></h3>
+          <p>
+            ServiceNow remains the most comprehensive platform for AI-powered change management, with agentic
+            workflows shipping out-of-the-box since the Yokohama release and expanding in the August release.
+          </p>
+
+          <h3>AI Features</h3>
+          <ul class="feature-list">
+            <li><strong>Change Quality Agent</strong> — Scores change records (Excellent → Incomplete), suggests field improvements, persists scores in <code>ai_change_quality_score</code> table for trend tracking</li>
+            <li><strong>Generate Change Request Plan</strong> — 6-agent workflow writes implementation plan, backout plan, test plan, risk/impact analysis, and justification</li>
+            <li><strong>Risk Intelligence</strong> — ML analyzes historical patterns to predict failure probability</li>
+            <li><strong>Conflict Scheduling</strong> — AI-assisted calendar flags overlapping changes and blackout conflicts</li>
+            <li><strong>Change Success Scores</strong> — Team performance scoring enables auto-approval for low-risk changes</li>
+            <li><strong>Conversational Configuration</strong> — Natural-language setup of change workflows via AI agent</li>
+            <li><strong>Predictive Intelligence</strong> — Suggests standard change templates via clustering similar records</li>
+            <li><strong>DevOps Change Velocity</strong> — Connects dev tools to change management for auto-ticketing</li>
+          </ul>
+
+          <h3>Pricing Update (Apr 2026)</h3>
+          <p>
+            ServiceNow replaced 5 legacy tiers with 3 AI-native tiers: Foundation, Advanced, Prime.
+            Now Assist, Moveworks, AI Control Tower, and Workflow Data Fabric are bundled into every tier.
+            Change Management and agentic AI workflows require Advanced or Prime.
+          </p>
+
+          <p><strong>Sources:</strong></p>
+          <ul class="feature-list">
+            <li><a href="https://www.servicenow.com/products/change-management.html" target="_blank" rel="noopener">ServiceNow Change Management product page</a></li>
+            <li><a href="https://www.servicenow.com/docs/r/it-service-management/now-assist-for-it-service-management-itsm/now-assist-itsm-aiagents-assess-quality-change-request-workflow.html" target="_blank" rel="noopener">Change Quality Agent workflow docs</a></li>
+            <li><a href="https://www.servicenow.com/docs/r/it-service-management/change-management/now-assist-itsm-agentic-ai-in-change.html" target="_blank" rel="noopener">Agentic AI in Change Management</a></li>
+            <li><a href="https://www.crossfuze.com/campaigns/servicenow-pricing-changes-2026" target="_blank" rel="noopener">ServiceNow 2026 pricing changes (Crossfuze)</a></li>
+            <li><a href="https://aelumconsulting.com/blogs/servicenow-change-management-guide/" target="_blank" rel="noopener">ServiceNow Change Management guide (Aelum)</a></li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- JSM -->
+      <section id="jsm">
+        <h2>Jira Service Management</h2>
+
+        <div class="competitor-block">
+          <h3>Atlassian JSM + Rovo Ops <span class="competitor-tag">Strong Challenger</span></h3>
+          <p>
+            Atlassian's AI Risk Assessment for change management reached general availability, bringing
+            Rovo-powered risk scoring directly into change work items for Premium and Enterprise customers.
+          </p>
+
+          <h3>AI Features</h3>
+          <ul class="feature-list">
+            <li><strong>AI Risk Assessment (GA)</strong> — Technical and operational risk dimensions with explainable scoring</li>
+            <li><strong>Technical Risk</strong> — Analyzes deployment complexity, rollback difficulty, infrastructure impact</li>
+            <li><strong>Operational Risk</strong> — Scheduling conflicts, freeze window clashes, asset dependencies</li>
+            <li><strong>Mitigation Suggestions</strong> — Auto-creates task work items when mitigation is accepted</li>
+            <li><strong>Knowledge Base Integration</strong> — Links Confluence KB articles into risk context</li>
+            <li><strong>Rovo Agents in JSM Studio</strong> — Custom agents for change summaries and CI data surfacing</li>
+          </ul>
+
+          <h3>Implementation Notes</h3>
+          <p>
+            Deviniti recommends a 4–6 week parallel review period before Rovo influences live CAB decisions.
+            Regulated environments (DORA, ISO 27001) should conduct formal AI risk assessments. CMDB blast-radius
+            requires intentional Assets configuration — not automatic.
+          </p>
+
+          <p><strong>Sources:</strong></p>
+          <ul class="feature-list">
+            <li><a href="https://community.atlassian.com/forums/Jira-Service-Management-articles/AI-Risk-Assessment-is-now-generally-available-in-Jira-Service/ba-p/3214684" target="_blank" rel="noopener">AI Risk Assessment GA announcement</a></li>
+            <li><a href="https://support.atlassian.com/jira-service-management-cloud/docs/assess-potential-risks-to-your-changes-with-rovo-ops/" target="_blank" rel="noopener">Assess risks with Rovo Ops (Atlassian docs)</a></li>
+            <li><a href="https://support.atlassian.com/jira-service-management-cloud/docs/enable-and-configure-risks-to-your-changes-with-rovo-ops/" target="_blank" rel="noopener">Enable &amp; configure AI risk assessment</a></li>
+            <li><a href="https://deviniti.com/blog/enterprise-software/implementing-change-management-in-jira-service-management-with-rovo/" target="_blank" rel="noopener">Implementing change management with Rovo (Deviniti)</a></li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- FRESHSERVICE -->
+      <section id="freshservice">
+        <h2>Freshservice</h2>
+
+        <div class="competitor-block">
+          <h3>Freshworks Freshservice + Freddy AI <span class="competitor-tag">Fast Mover</span></h3>
+          <p>
+            Freshservice's May 2026 launch was one of the biggest change management AI announcements this quarter,
+            introducing deterministic Change Risk Assessment and Freddy AI Agent Studio.
+          </p>
+
+          <h3>AI Features</h3>
+          <ul class="feature-list">
+            <li><strong>Change Risk Policies</strong> — Deterministic scoring via weighted Risk Profiles (priority, CMDB dependencies, blackout windows)</li>
+            <li><strong>Risk Surveys</strong> — Qualitative stakeholder assessments (planned Q3 2026)</li>
+            <li><strong>Freddy AI Agent Studio</strong> — No-code builder for domain-specific agents (approvals, routing, access provisioning)</li>
+            <li><strong>MCP Gateway (Early Access)</strong> — Connects Freshservice to Claude, ChatGPT, Cursor, Copilot via Model Context Protocol</li>
+            <li><strong>Parallel Approval Chains</strong> — Multiple stakeholders approve simultaneously (May 2026)</li>
+            <li><strong>XLAs</strong> — Experience Level Agreements measuring reliability, quality, effort beyond SLAs</li>
+            <li><strong>Automated Standard Changes</strong> — End-to-end workflow for low-risk repeatable changes</li>
+          </ul>
+
+          <h3>Important Migration Note</h3>
+          <p>
+            Enabling Change Risk Policies makes the native Risk field system-managed — existing manual
+            workflows and business rules setting risk values will need review before activation.
+          </p>
+
+          <p><strong>Sources:</strong></p>
+          <ul class="feature-list">
+            <li><a href="https://www.freshworks.com/theworks/company-news/may-2026-launch/" target="_blank" rel="noopener">Freshworks May 2026 launch announcement</a></li>
+            <li><a href="https://support.freshservice.com/support/solutions/articles/50000012709-change-risk-policies-in-freshservice" target="_blank" rel="noopener">Change Risk Policies docs</a></li>
+            <li><a href="https://www.freshworks.com/change-management/ai/" target="_blank" rel="noopener">AI in Change Management (Freshworks)</a></li>
+            <li><a href="https://www.gb-advisors.com/blog/less-risk-and-more-control-in-your-it-changes-with-freshservice-and-freddy-ai" target="_blank" rel="noopener">Freshservice + Freddy AI analysis (GB Advisors)</a></li>
+            <li><a href="https://www.zestco.uk/may-2026-feature-release-extra/" target="_blank" rel="noopener">May 2026 feature breakdown (Zest Consulting)</a></li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- BMC HELIX -->
+      <section id="bmc">
+        <h2>BMC Helix</h2>
+
+        <div class="competitor-block">
+          <h3>BMC Helix ITSM + HelixGPT <span class="competitor-tag">Enterprise</span></h3>
+          <p>
+            BMC's 26.3 release this week adds the most significant change management AI update from BMC in years —
+            autonomous validation and risk assessment agents built into the change lifecycle.
+          </p>
+
+          <h3>AI Features</h3>
+          <ul class="feature-list">
+            <li><strong>Change Coordinator Agent</strong> — Autonomous validation on status transitions; checks documentation, risk, readiness</li>
+            <li><strong>Change Risk Advisor (HelixGPT)</strong> — Analyzes changes against service health, historical incidents, past outcomes</li>
+            <li><strong>Validation Reports</strong> — Structured findings with overall recommendation (approve/hold/reject advisory)</li>
+            <li><strong>HelixGPT Agent Builder</strong> — Compose custom AI agents with multi-agent orchestration</li>
+            <li><strong>Drag-and-Drop Change Calendar</strong> — Visual scheduling with conflict visibility</li>
+            <li><strong>Adaptable Approval Engine</strong> — Flexible governance process definitions</li>
+          </ul>
+
+          <p><strong>Sources:</strong></p>
+          <ul class="feature-list">
+            <li><a href="https://www.helixops.ai/products/capabilities/change-release-management.html" target="_blank" rel="noopener">BMC Helix Change &amp; Release Management</a></li>
+            <li><a href="https://docs.helixops.ai/bin/Service-Management/IT-Service-Management/BMC-Helix-ITSM-Change-Management/change263/" target="_blank" rel="noopener">Change Management 26.3 release notes</a></li>
+            <li><a href="https://docs.helixops.ai/bin/Service-Management/Employee-Digital-Workplace/BMC-HelixGPT/helixgpt261/Pre-built-agents/Change-Risk-Advisor/" target="_blank" rel="noopener">Change Risk Advisor agent docs</a></li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- OTHER PLAYERS -->
+      <section id="others">
+        <h2>Other Major Players</h2>
+
+        <div class="competitor-block">
+          <h3>ManageEngine ServiceDesk Plus + Zia</h3>
+          <ul class="feature-list">
+            <li><strong>Zia Change Risk Prediction</strong> — ML trained on historic change data; suggests top 2 risk levels on create/edit</li>
+            <li><strong>Natural Language Workflows</strong> — Build end-to-end change workflows via prompts</li>
+            <li><strong>Generative Plans</strong> — AI drafts rollout and backout plans</li>
+            <li><strong>Included at No Extra Cost</strong> — Native AI in subscription tiers, no bolt-on pricing</li>
+          </ul>
+          <p>
+            <a href="https://www.manageengine.com/products/service-desk/it-change-management/change-management-software.html" target="_blank" rel="noopener">ManageEngine Change Management →</a> ·
+            <a href="https://help.sdpondemand.com/zia-ai" target="_blank" rel="noopener">Zia AI docs →</a>
+          </p>
+        </div>
+
+        <div class="competitor-block">
+          <h3>Ivanti Neurons for ITSM</h3>
+          <ul class="feature-list">
+            <li>AI-driven automation across incident, request, problem, and change processes</li>
+            <li>Published competitive analysis positioning against BMC Helix, ServiceNow (radar chart scoring)</li>
+            <li>Focus on agent experience and assistive capture (Smart Recorder)</li>
+          </ul>
+          <p>
+            <a href="https://www.ivanti.com/resources/whitepapers/ai-driven-itsm-vendor-comparison" target="_blank" rel="noopener">Ivanti AI-driven ITSM vendor comparison →</a>
+          </p>
+        </div>
+
+        <div class="competitor-block">
+          <h3>IBM Cloud Pak for AIOps</h3>
+          <ul class="feature-list">
+            <li><strong>Change Risk Algorithm</strong> — Unsupervised learning correlating change data with incident data</li>
+            <li>Provides 0–100% risk score in ChatOps channels when change requests are opened</li>
+            <li>Requires ~10K change tickets with 2%+ failure rate for ideal training</li>
+          </ul>
+          <p>
+            <a href="https://www.ibm.com/docs/en/cloud-paks/cloud-pak-aiops/4.12.0?topic=algorithms-change-risk" target="_blank" rel="noopener">IBM Change Risk algorithm docs →</a>
+          </p>
+        </div>
+      </section>
+
+      <!-- AI LAYER & STARTUPS -->
+      <section id="startups">
+        <h2>AI Layer &amp; Emerging Players</h2>
+
+        <div class="competitor-block">
+          <h3>Moveworks <span class="competitor-tag">AI Orchestration</span></h3>
+          <p>
+            Moveworks sits on top of existing ITSM platforms (ServiceNow, Jira, Freshservice) rather than
+            replacing them. Now part of ServiceNow's bundled offering after acquisition integration.
+          </p>
+          <ul class="feature-list">
+            <li>Auto-create change requests from recurring incidents</li>
+            <li>Chat-based change approvals (Slack, Teams)</li>
+            <li>Agent Studio for custom change management agents</li>
+            <li>Initiative Designer — describe a process, get end-to-end automation plan</li>
+            <li>Named Challenger in 2025 Gartner Magic Quadrant for AI in ITSM</li>
+          </ul>
+          <p>
+            <a href="https://www.moveworks.com/us/en/solutions/ai-help-desk" target="_blank" rel="noopener">Moveworks AI Helpdesk →</a> ·
+            <a href="https://www.moveworks.com/us/en/platform/ai-agent-builder" target="_blank" rel="noopener">Agent Studio →</a>
+          </p>
+        </div>
+
+        <div class="competitor-block">
+          <h3>Itential <span class="competitor-tag">Network Change Automation</span></h3>
+          <p>
+            FlowAI agents for network infrastructure changes with ServiceNow bidirectional integration.
+            Demonstrated safety override of human-approved flawed changes in regulated MSP environments.
+          </p>
+          <p>
+            <a href="https://www.itential.com/customer-stories/global-msp-agentic-change-management/" target="_blank" rel="noopener">Itential agentic change management case study →</a>
+          </p>
+        </div>
+
+        <div class="competitor-block">
+          <h3>Alloy Navigator <span class="competitor-tag">Mid-Market ITSM</span></h3>
+          <p>
+            Integrated ITSM platform emphasizing governance-first automation, unified workflows, and
+            consolidated tooling. Published 2026 ITSM trends report highlighting AI governance requirements.
+          </p>
+          <p>
+            <a href="https://www.alloysoftware.com/blog/itsm-trends-in-2026/" target="_blank" rel="noopener">ITSM Trends in 2026 →</a>
+          </p>
+        </div>
+      </section>
+
+      <!-- INDUSTRY TRENDS -->
+      <section id="trends">
+        <h2>Industry Trends &amp; Framework Updates</h2>
+
+        <h3>ITIL 5 and Change Enablement</h3>
+        <p>
+          ITIL 5 Managing Professional certifications launch March 12, 2026 (Product, Service, Experience).
+          Change enablement shifts from process to behavior-based capability with AI as native consideration.
+          AI can prompt risk reflection, draft backout plans, surface patterns, and translate change details
+          into stakeholder communications — reinforcing discipline rather than replacing it.
+        </p>
+        <p>
+          <a href="https://community.peoplecert.org/public/clubs/itil/blogs/itil-5-ai-and-the-new-shape-of-change-enablement" target="_blank" rel="noopener">ITIL 5, AI, and Change Enablement (PeopleCert) →</a>
+        </p>
+
+        <h3>Governance-First ITSM (2026)</h3>
+        <p>
+          Enterprises adopting governance-first approaches: transparent, auditable automation with human-in-the-loop
+          supervision. Platform consolidation into cloud-based ITSM with built-in AI. Outcome orientation via XLAs
+          over traditional SLAs.
+        </p>
+
+        <h3>Customer Spotlight: Kingfisher</h3>
+        <p>
+          Kingfisher (B&amp;Q) building toward "touchless resolution" with ServiceNow. Internal agent use cases
+          include a change quality agent that autonomously checks change records before CAB, and an incident agent
+          that surfaces recent changes causing issues. Pragmatic on AI Control Tower — testing within ITSM first
+          before cross-platform governance.
+        </p>
+        <p>
+          <a href="https://diginomica.com/call-trees-agentic-ai-how-kingfisher-winning-back-employee-time-customers" target="_blank" rel="noopener">Kingfisher agentic AI story (Diginomica) →</a>
+        </p>
+
+        <h3>Market Stats</h3>
+        <ul class="feature-list">
+          <li>88% of organizations use AI in at least one business function (McKinsey State of AI 2025)</li>
+          <li>76% reduction in ticket time from AI-enabled ITSM teams (Freshservice benchmark 2025)</li>
+          <li>54% drop in resolution time for GenAI-enabled IT teams (SolarWinds State of ITSM 2025)</li>
+          <li>40% of enterprise applications will include task-specific AI agents by end of 2026 (Gartner)</li>
+          <li>Change management failures cause ~42% of cloud outages</li>
+        </ul>
+      </section>
+
+      <!-- RESOURCES -->
+      <section id="resources">
+        <h2>Articles, Videos &amp; Documentation</h2>
+
+        <ul class="resource-list">
+          <li>
+            <span class="resource-type video">Video</span>
+            <div>
+              <strong>Getting Started with AI Agents on ITSM Now Assist [APAC]</strong>
+              <p>Live demo of ServiceNow's 6-agent "Generate Change Request Plan" workflow — writes implementation, backout, test plans, and risk analysis.</p>
+              <a href="https://www.youtube.com/watch?v=zNaBjQ7e12I" target="_blank" rel="noopener">youtube.com/watch?v=zNaBjQ7e12I</a>
+            </div>
+          </li>
+          <li>
+            <span class="resource-type video">Video</span>
+            <div>
+              <strong>How AI Is Transforming ITSM And ITIL 5 | Simplilearn</strong>
+              <p>Career trends session on AI in ITSM, ITIL 5 framework, and real-world use cases including change risk automation.</p>
+              <a href="https://www.youtube.com/watch?v=-9VXTrDvNE8" target="_blank" rel="noopener">youtube.com/watch?v=-9VXTrDvNE8</a>
+            </div>
+          </li>
+          <li>
+            <span class="resource-type video">Video</span>
+            <div>
+              <strong>How to Become an ITIL Managing Professional in 2026</strong>
+              <p>Overview of new ITIL 5 MP certifications launching March 12, 2026.</p>
+              <a href="https://www.youtube.com/watch?v=tFrinOtGhrY" target="_blank" rel="noopener">youtube.com/watch?v=tFrinOtGhrY</a>
+            </div>
+          </li>
+          <li>
+            <span class="resource-type article">Article</span>
+            <div>
+              <strong>6 AI Change Management Tools for 2026 | Budibase</strong>
+              <p>Comparative overview of Budibase, ServiceNow, JSM, n8n, ManageEngine, and Power Automate for AI change management.</p>
+              <a href="https://budibase.com/blog/ai-agents/ai-change-management/" target="_blank" rel="noopener">budibase.com/blog/ai-agents/ai-change-management</a>
+            </div>
+          </li>
+          <li>
+            <span class="resource-type blog">Blog</span>
+            <div>
+              <strong>ServiceNow Change Management Guide | Aelum Consulting</strong>
+              <p>Deep dive on Change Quality Agent, conversational configuration, and collision detection.</p>
+              <a href="https://aelumconsulting.com/blogs/servicenow-change-management-guide/" target="_blank" rel="noopener">aelumconsulting.com/blogs/servicenow-change-management-guide</a>
+            </div>
+          </li>
+          <li>
+            <span class="resource-type docs">Docs</span>
+            <div>
+              <strong>ServiceNow Predictive Intelligence for Change Management</strong>
+              <p>ML algorithms for standard change templates, similar incident identification, and risk enhancement.</p>
+              <a href="https://www.servicenow.com/docs/r/it-service-management/change-management/change-mgmt-intelligent-solutions.html" target="_blank" rel="noopener">ServiceNow docs</a>
+            </div>
+          </li>
+          <li>
+            <span class="resource-type article">Article</span>
+            <div>
+              <strong>AI agents get better at IT ops, but only with humans in the loop | Computerworld</strong>
+              <p>Fixify study on human-AI collaboration rates, rejection patterns, and data quality requirements.</p>
+              <a href="https://www.computerworld.com/article/4205062/ai-agents-get-better-at-it-ops-but-only-with-humans-in-the-loop.html" target="_blank" rel="noopener">computerworld.com</a>
+            </div>
+          </li>
+          <li>
+            <span class="resource-type blog">Blog</span>
+            <div>
+              <strong>Iberdrola enhances IT operations using Amazon Bedrock AgentCore | AWS</strong>
+              <p>Enterprise case study on multi-agent change validation integrated with ServiceNow.</p>
+              <a href="https://aws.amazon.com/blogs/machine-learning/iberdrola-enhances-it-operations-using-amazon-bedrock-agentcore/" target="_blank" rel="noopener">aws.amazon.com/blogs</a>
+            </div>
+          </li>
+          <li>
+            <span class="resource-type article">Article</span>
+            <div>
+              <strong>ServiceNow Pricing Changes 2026 | Crossfuze</strong>
+              <p>Foundation/Advanced/Prime tier breakdown with bundled AI capabilities.</p>
+              <a href="https://www.crossfuze.com/campaigns/servicenow-pricing-changes-2026" target="_blank" rel="noopener">crossfuze.com</a>
+            </div>
+          </li>
+          <li>
+            <span class="resource-type docs">Docs</span>
+            <div>
+              <strong>ManageEngine Change Risk Assessment Guide</strong>
+              <p>5-step guide to building change risk questionnaires with Zia prediction.</p>
+              <a href="https://www.manageengine.com/in/products/service-desk/it-change-management/change-risk-assessment.html" target="_blank" rel="noopener">manageengine.com</a>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <!-- TAKEAWAYS -->
+      <section id="takeaways">
+        <h2>Key Takeaways for Product Teams</h2>
+        <div class="takeaways">
+          <ol>
+            <li><strong>Change quality scoring is the new table stakes.</strong> ServiceNow, BMC, Freshservice, and JSM all now offer AI-powered change record quality or risk assessment. If you're building change management, automated quality gates before CAB are expected.</li>
+            <li><strong>Deterministic + AI hybrid models win.</strong> Freshservice's policy-based scoring combined with AI-generated surveys shows the market moving toward auditable, explainable risk frameworks — not black-box ML alone.</li>
+            <li><strong>MCP integration is emerging.</strong> Freshservice's MCP Gateway and Moveworks' MCP tools signal that ITSM platforms must expose change data to external AI tools (Cursor, Claude, Copilot) — not just internal agents.</li>
+            <li><strong>Multi-agent orchestration is production-ready.</strong> Iberdrola, Itential, and ServiceNow all demonstrate sequential multi-agent workflows in regulated environments with full audit trails.</li>
+            <li><strong>Data quality beats model quality.</strong> The Fixify study confirms that 50% of AI failures are "target not found" — invest in CMDB hygiene and identity data before AI agents.</li>
+            <li><strong>Human-in-the-loop is non-negotiable.</strong> Every major vendor positions AI as advisory. JSM explicitly states AI does not replace approvals. Build for augmentation, not replacement.</li>
+            <li><strong>Parallel approvals and standard change automation</strong> are low-hanging fruit — reduce cycle time without removing governance.</li>
+            <li><strong>ITIL 5 reframes change as enablement,</strong> not just process — AI tools that reinforce good behaviors (risk prompts, backout drafts, stakeholder comms) align with the framework direction.</li>
+          </ol>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <p>Next report: Sunday, Aug 10, 2026 at 6:00 PM IST</p>
+        <p><a href="../index.html">← Back to home</a></p>
+      </footer>
+    </main>
+  </div>
+</body>
+</html>

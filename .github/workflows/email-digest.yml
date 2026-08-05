@@ -1,0 +1,58 @@
+name: Email Weekly Digest
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'weeks/**'
+  workflow_dispatch:
+
+jobs:
+  send-email:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Detect changed week report
+        id: report
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            FILE=$(ls -t weeks/*.html | head -1)
+          else
+            FILE=$(git diff --name-only HEAD~1 HEAD -- 'weeks/*.html' | head -1)
+            if [ -z "$FILE" ]; then
+              FILE=$(git diff --name-only HEAD~1 HEAD -- 'weeks/' | grep '\.html$' | head -1)
+            fi
+          fi
+
+          if [ -z "$FILE" ] || [ ! -f "$FILE" ]; then
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+            echo "No new week report found."
+            exit 0
+          fi
+
+          echo "file=$FILE" >> "$GITHUB_OUTPUT"
+          echo "filename=$(basename "$FILE")" >> "$GITHUB_OUTPUT"
+          echo "skip=false" >> "$GITHUB_OUTPUT"
+
+      - name: Build email content
+        if: steps.report.outputs.skip != 'true'
+        id: content
+        run: python scripts/extract_digest.py "${{ steps.report.outputs.file }}"
+
+      - name: Send email
+        if: steps.report.outputs.skip != 'true'
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: ${{ secrets.MAIL_SERVER }}
+          server_port: ${{ secrets.MAIL_PORT }}
+          username: ${{ secrets.MAIL_USERNAME }}
+          password: ${{ secrets.MAIL_PASSWORD }}
+          subject: ${{ steps.content.outputs.subject }}
+          to: ${{ secrets.MAIL_TO }}
+          from: ${{ secrets.MAIL_FROM }}
+          html_body: file://email-body.html
+          convert_markdown: false
