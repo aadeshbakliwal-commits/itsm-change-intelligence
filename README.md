@@ -14,8 +14,8 @@ Add these [repository secrets](https://github.com/aadeshbakliwal-commits/itsm-ch
 | `MAIL_PORT` | `587` | SMTP port (587 for TLS) |
 | `MAIL_USERNAME` | `you@gmail.com` | SMTP login |
 | `MAIL_PASSWORD` | *(app password)* | Gmail App Password — not your regular password |
-| `MAIL_FROM` | `you@gmail.com` | From address |
-| `MAIL_TO` | `you@gmail.com` | Where digests are sent |
+| `MAIL_FROM` | `aadesh.bakliwal@zendesk.com` | From address |
+| `MAIL_TO` | `aadesh.bakliwal@zendesk.com` | Where digests are sent |
 
 ### Gmail App Password
 
